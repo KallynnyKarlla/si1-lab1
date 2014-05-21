@@ -9,8 +9,8 @@
 }
 
 #img-cadastro:hover{
-	width:450px;
-	height:300px;
+	width:400px;
+	height:250px;
 }
 #img-conclusao{
 	width:400px;
@@ -22,7 +22,6 @@
 	height:400px;
 }
 #cadastre-se{
-
 	text-align: right;
 	color: #FFFF00;
 	font-size: 25px;
@@ -31,12 +30,10 @@
 	color: #7FFFD4;
 }
 #texto {
-
 	font-family: "Trebuchet MS", Batanga;
 	font-size: 15px;
 	color: #FFFFFF;
 	text-indent:35px;
-	
 } 
 
 #topicos2{
@@ -66,7 +63,6 @@
 
 }
 #div{
-
 	text-align:center;
 	position:relative;
 	width:100%;
@@ -75,20 +71,15 @@
 	font-family: "Trebuchet MS", Arial;
 	font-size: 40px;
 	color: #000000;
-	
 }
 #titulo{
-
 	text-align:center;
 	font-family: "Trebuchet MS", Arial;
 	font-size: 30px;
 	color: #FFFF00;
-	
 }
 body{
-
 	background-image:url("imagem-css.jpg");
-
 }
 
 a {
