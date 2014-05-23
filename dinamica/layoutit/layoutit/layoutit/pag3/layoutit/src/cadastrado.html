@@ -12,7 +12,7 @@
 		<script type="text/javascript">
 			function adicionaTema() {
 				$nome = $('#nome').val();
-
+				
 				$id = $nome.split(" ").join("");  // tira os espaços em branco do nome
 
 				if ($('#' + $id).length) { // se já existir uma div com esse id lança uma msg de erro
@@ -22,7 +22,8 @@
 					$('#temas').append('<div class="label label-danger col-sm-5"  id="' + $id + '"> </div>');
 					$divTema = $('#' + $id);
 					$divTema.append("<h3>" + $nome);
-					$divTema.append("<br /> ");
+
+
 
 					limpaForms();
 					$divTema.hide().fadeIn();
@@ -33,11 +34,16 @@
 				$('#nome').val('');
 	
 			}
-
 			function removerTema(){
 				$nome = $('#nomeRem').val();
 				$id = $nome.split(" ").join("");  // tira os espaços em branco do nome
 				$('#'+ $id).fadeOut();	
+} 
+
+			function temaAprendido(){
+				$nome = $('#nomeRem').val();
+				$id = $nome.split(" ").join("");  // tira os espaços em branco do nome
+				$('#'+ $id).css("background","green");	
 			} 
 			</script>
 			
@@ -45,7 +51,7 @@
 
 	<body>
 		<nav class="navbar navbar-inverse">
-			<a class="navbar-brand" href="#">Meus temas a aprender</a>
+			<a class="navbar-brand" href="#">Temas</a>
 			<ul class="nav navbar-nav">
 			
 		</nav>
@@ -57,7 +63,7 @@
 			<fieldset>
 				<legend> <i> Adicionar tema </i> </legend>
 
-				<label> Nome: </label>
+				<label> Assunto a aprender: </label>
 				<input type="text" id="nome" class="form-control" value="" required="required">
 
 				<button type="button" onclick="adicionaTema()" class="btn btn-primary">Submeter</button>
@@ -72,6 +78,17 @@
 				<label> Nome: </label>
 				<input type="text" id="nomeRem" class="form-control" value="" required="required">
 
+				<button type="button" onclick="temaAprendido()" class="btn btn-primary">Submeter</button>
+			</fieldset>
+		</div>
+
+		<div id="remTema" class="well col-sm-12"> 
+			<fieldset>
+				<legend> <i> Remover Tema </i> </legend>
+
+				<label> Nome: </label>
+				<input type="text" id="nomeRem" class="form-control" value="" required="required">
+
 				<button type="button" onclick="removerTema()" class="btn btn-primary">Submeter</button>
 			</fieldset>
 		</div>
@@ -80,9 +97,9 @@
 
 		<!-- div series -->
 		<div id="temas" class="col-sm-7"> 
-			<h4 class="text-center"><font face="orange"> Temas a aprender </font> </h4>
+			<h4 class="text-center"><font face="orange"> Temas escolhidos </font> </h4>
 		</div>
-		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		<a href="../../../../src/index.html">Página Inicial</a>
+		<div style=~"clear:both"></div>
+		<div id="link"><a href="../../../../src/index.html">Página Inicial</a> </div>
 	</body>
 </html>
