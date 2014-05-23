@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>SI - Temas da disciplina </title>
+		<meta charset="UTF-8">
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap.min.css" rel="stylesheet">
+		<!-- jQuery -->
+		<script src="../../../../jquery-1.11.1.min.js"></script>
+		<!-- meu próprio css e javascript -->
+		<link href="style.css" rel="stylesheet">
+		
+		<script type="text/javascript">
+			function adicionaTema() {
+				$nome = $('#nome').val();
+
+				$id = $nome.split(" ").join("");  // tira os espaços em branco do nome
+
+				if ($('#' + $id).length) { // se já existir uma div com esse id lança uma msg de erro
+					alert("Tema já existe!");
+				} else {
+
+					$('#temas').append('<div class="label label-danger col-sm-5"  id="' + $id + '"> </div>');
+					$divTema = $('#' + $id);
+					$divTema.append("<h3>" + $nome);
+					$divTema.append("<br /> ");
+
+					limpaForms();
+					$divTema.hide().fadeIn();
+					}
+				}
+
+			function limpaForms() {
+				$('#nome').val('');
+	
+			}
+
+			function removerTema(){
+				$nome = $('#nomeRem').val();
+				$id = $nome.split(" ").join("");  // tira os espaços em branco do nome
+				$('#'+ $id).fadeOut();	
+			} 
+			</script>
+			
+	</head>
+
+	<body>
+		<nav class="navbar navbar-inverse">
+			<a class="navbar-brand" href="#">Meus temas a aprender</a>
+			<ul class="nav navbar-nav">
+			
+		</nav>
+
+		<div id="operacoesCrud" class="col-sm-4">
+
+		<!-- div adicionar série -->
+		<div id="addTema" class="well col-sm-12"> 
+			<fieldset>
+				<legend> <i> Adicionar tema </i> </legend>
+
+				<label> Nome: </label>
+				<input type="text" id="nome" class="form-control" value="" required="required">
+
+				<button type="button" onclick="adicionaTema()" class="btn btn-primary">Submeter</button>
+			</fieldset>
+		</div>
+
+		<!-- div remover serie -->
+		<div id="remTema" class="well col-sm-12"> 
+			<fieldset>
+				<legend> <i> Tema aprendido </i> </legend>
+
+				<label> Nome: </label>
+				<input type="text" id="nomeRem" class="form-control" value="" required="required">
+
+				<button type="button" onclick="removerTema()" class="btn btn-primary">Submeter</button>
+			</fieldset>
+		</div>
+
+		</div>
+
+		<!-- div series -->
+		<div id="temas" class="col-sm-7"> 
+			<h4 class="text-center"><font face="orange"> Temas a aprender </font> </h4>
+		</div>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<a href="../../../../src/index.html">Página Inicial</a>
+	</body>
+</html>
