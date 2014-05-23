@@ -31,7 +31,7 @@
 }
 #texto {
 	font-family: "Trebuchet MS", Batanga;
-	font-size: 15px;
+	font-size: 20px;
 	color: #FFFFFF;
 	text-indent:35px;
 } 
@@ -79,7 +79,7 @@
 	color: #FFFF00;
 }
 body{
-	background-image:url("imagem-css.jpg");
+	background-image:url("backgroud.jpg");
 }
 
 a {
